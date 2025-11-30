@@ -1,4 +1,3 @@
-import { Button } from "./ui/button";
 import heroBurrito from "@/assets/hero-burrito.jpg";
 
 export const Hero = () => {
@@ -31,19 +30,16 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <Button 
-              size="lg" 
+            <button 
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg rounded-full transition-transform hover:scale-105"
             >
               Order Now
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-6 text-lg rounded-full transition-all"
+            </button>
+            <button 
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-6 text-lg rounded-full transition-all bg-transparent"
             >
               Book a Table
-            </Button>
+            </button>
           </div>
         </div>
       </div>

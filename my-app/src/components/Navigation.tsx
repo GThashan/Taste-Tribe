@@ -1,6 +1,5 @@
 import { ShoppingCart } from "lucide-react";
 import { Logo } from "./Logo";
-import { Button } from "./ui/button";
 
 export const Navigation = () => {
   const navItems = ["Home", "Menu", "Order Food", "Blog", "Page"];
@@ -29,9 +28,9 @@ export const Navigation = () => {
             <button className="p-2 hover:bg-secondary rounded-full transition-colors">
               <ShoppingCart className="w-5 h-5" />
             </button>
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6">
+            <button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-2 rounded-lg transition-colors">
               Order Online
-            </Button>
+            </button>
           </div>
         </div>
       </div>

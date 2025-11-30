@@ -1,5 +1,3 @@
-import { Card } from "./ui/card";
-import { Button } from "./ui/button";
 import { Star } from "lucide-react";
 import burgerImg from "@/assets/burger.jpg";
 import friesImg from "@/assets/fries.jpg";
@@ -35,9 +33,9 @@ export const PopularMenu = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
           {menuItems.map((item) => (
-            <Card
+            <div
               key={item.name}
-              className="group cursor-pointer hover:shadow-xl transition-all border-border overflow-hidden"
+              className="group cursor-pointer hover:shadow-xl transition-all border border-border rounded-lg overflow-hidden bg-card"
             >
               <div className="aspect-square overflow-hidden">
                 <img
@@ -62,14 +60,14 @@ export const PopularMenu = () => {
                 </div>
                 <p className="text-xl font-bold text-primary">{item.price}</p>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
 
         <div className="text-center">
-          <Button size="lg" className="bg-primary hover:bg-primary/90">
+          <button className="px-8 py-4 text-lg bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg transition-colors">
             View Full Menu
-          </Button>
+          </button>
         </div>
       </div>
     </section>

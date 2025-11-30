@@ -1,5 +1,3 @@
-import { Button } from "./ui/button";
-import { Card } from "./ui/card";
 import burgerImg from "@/assets/burger.jpg";
 import pizzaImg from "@/assets/pizza.jpg";
 
@@ -32,21 +30,20 @@ export const FeaturedProducts = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-6">
-          {products.map((product, index) => (
-            <Card
+          {products.map((product) => (
+            <div
               key={product.title}
-              className={`${product.bgColor} border-none overflow-hidden relative group cursor-pointer transition-transform hover:scale-105`}
+              className={`${product.bgColor} border-none rounded-lg overflow-hidden relative group cursor-pointer transition-transform hover:scale-105`}
             >
               <div className="p-6 flex items-center justify-between">
                 <div className="text-white">
                   <h3 className="text-3xl font-bold mb-2">{product.title}</h3>
                   <p className="text-white/90 mb-4">{product.description}</p>
-                  <Button 
-                    variant="outline" 
-                    className="border-2 border-white text-white hover:bg-white hover:text-background"
+                  <button 
+                    className="border-2 border-white text-white hover:bg-white hover:text-background px-4 py-2 rounded-lg transition-colors font-medium"
                   >
                     Order Now
-                  </Button>
+                  </button>
                 </div>
                 <div className="w-32 h-32 relative">
                   <img
@@ -56,7 +53,7 @@ export const FeaturedProducts = () => {
                   />
                 </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>

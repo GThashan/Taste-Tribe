@@ -1,5 +1,5 @@
 import { Check } from "lucide-react";
-import chickenImg from "@/assets/chicken.jpg";
+import chickenImg from "../assets/chicken.jpg";
 
 export const About = () => {
   const features = [

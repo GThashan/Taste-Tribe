@@ -1,7 +1,3 @@
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-
 export const ContactForm = () => {
   return (
     <section className="py-20 bg-background">
@@ -16,31 +12,33 @@ export const ContactForm = () => {
 
           <form className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
-              <Input
+              <input
+                type="text"
                 placeholder="Your Name"
-                className="bg-card border-border"
+                className="bg-card border border-border rounded-lg px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-primary"
               />
-              <Input
+              <input
                 type="email"
                 placeholder="Your Email"
-                className="bg-card border-border"
+                className="bg-card border border-border rounded-lg px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
-            <Input
+            <input
+              type="text"
               placeholder="Subject"
-              className="bg-card border-border"
+              className="bg-card border border-border rounded-lg px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-primary"
             />
-            <Textarea
+            <textarea
               placeholder="Your Message"
               rows={6}
-              className="bg-card border-border resize-none"
+              className="bg-card border border-border rounded-lg px-4 py-3 w-full resize-none focus:outline-none focus:ring-2 focus:ring-primary"
             />
-            <Button
-              size="lg"
-              className="w-full md:w-auto px-12 bg-primary hover:bg-primary/90"
+            <button
+              type="submit"
+              className="w-full md:w-auto px-12 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg transition-colors"
             >
               Send Message
-            </Button>
+            </button>
           </form>
         </div>
       </div>

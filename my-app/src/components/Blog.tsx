@@ -1,4 +1,3 @@
-import { Card } from "./ui/card";
 import { Calendar } from "lucide-react";
 import burgerImg from "@/assets/burger.jpg";
 import pizzaImg from "@/assets/pizza.jpg";
@@ -40,9 +39,9 @@ export const Blog = () => {
 
         <div className="grid md:grid-cols-3 gap-6">
           {posts.map((post) => (
-            <Card
+            <div
               key={post.title}
-              className="group cursor-pointer hover:shadow-xl transition-all border-border overflow-hidden"
+              className="group cursor-pointer hover:shadow-xl transition-all border border-border rounded-lg overflow-hidden bg-card"
             >
               <div className="aspect-video overflow-hidden">
                 <img
@@ -61,7 +60,7 @@ export const Blog = () => {
                 </h3>
                 <p className="text-muted-foreground">{post.excerpt}</p>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>

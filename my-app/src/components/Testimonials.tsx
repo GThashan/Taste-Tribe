@@ -1,4 +1,3 @@
-import { Card } from "./ui/card";
 import { Star } from "lucide-react";
 
 export const Testimonials = () => {
@@ -40,7 +39,7 @@ export const Testimonials = () => {
 
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((testimonial) => (
-            <Card key={testimonial.name} className="p-6 border-border">
+            <div key={testimonial.name} className="p-6 border border-border rounded-lg bg-background">
               <div className="flex items-center gap-4 mb-4">
                 <img
                   src={testimonial.image}
@@ -60,7 +59,7 @@ export const Testimonials = () => {
               </div>
               
               <p className="text-muted-foreground italic">"{testimonial.comment}"</p>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
